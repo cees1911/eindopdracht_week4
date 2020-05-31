@@ -11,12 +11,12 @@
 
 
 
-  const guessletter = require("./script.js");
+const guessLetter = require("./script.js");
 
-  test("Komt letter voor in woord", function () {
-      const woord = "moestuin";
-      const ingevoerdeLetter = "o";
-      const output = woord.includes(ingevoerdeLetter);
-      expect(output).toBe(true);
+test("Komt letter voor in woord", function () {
+   const woord = "moestuin";
+   const ingevoerdeLetter = "o";
+   const output = woord.includes(ingevoerdeLetter);
+   expect(output).toBe(true);
 
-  }) 
+})
