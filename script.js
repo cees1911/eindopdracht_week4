@@ -15,6 +15,7 @@ const wordpicker = function (list) {
   let word = "sinaasappel";
   let index = Math.floor(Math.random() * list.length);
   const x = list;
+  console.log("wat ben ik?", word);
   return x[index];
 };
 
@@ -105,10 +106,15 @@ function beginTheGameWithPlayer() {
   document.querySelector(".lose").style.display = "none";
   document.querySelector("input").value = "";
 
-  const word = wordpicker(wordList).split("");
+  word = wordpicker(wordList).split("");
   spanTheWord1(word);
-  const tries = 0;
+
+  tries = 0;
   updateTriesDisplay(tries);
+
+  inputs = [];
+  theWord(word, inputs);
+  letters(word, inputs);
 }
 
 document.addEventListener("DOMContentLoaded", function () {
