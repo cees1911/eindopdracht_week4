@@ -10,7 +10,6 @@ const wordList = [
   "snoer",
   "geeuw"
 ];
-let maxAmount = 5;
 
 const wordpicker = function (list) {
   let word = "sinaasappel";
@@ -19,7 +18,6 @@ const wordpicker = function (list) {
   return x[index];
 };
 
-let inputs;
 const wordGuessed = function (word, inputs) {
   // remove all letters from word that are already guessed
   // We can do this with a for loop to.
@@ -51,7 +49,6 @@ const spanTheWord1 = function (word) {
   document.querySelector(".lose p span").innerHTML = `"${word.join("")}"`;
 };
 
-let tries = 0;
 const updateTriesDisplay = function (tries) {
   document.querySelector(".lives span").innerHTML = 5 - tries;
 };
@@ -108,12 +105,10 @@ function beginTheGameWithPlayer() {
   document.querySelector(".lose").style.display = "none";
   document.querySelector("input").value = "";
 
-  word = wordpicker(wordList).split("");
-  document.querySelector(".lose p span").innerHTML = `"${word.join("")}"`;
-  word;
-
-  document.querySelector(".lives span").innerHTML = 5 - 0;
-
+  const word = wordpicker(wordList).split("");
+  spanTheWord1(word);
+  const tries = 0;
+  updateTriesDisplay(tries);
 }
 
 document.addEventListener("DOMContentLoaded", function () {
