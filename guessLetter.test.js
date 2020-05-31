@@ -11,6 +11,7 @@
 
 
 
+<<<<<<< HEAD
   const guessLetter = require("./script.js");
 
   test("Komt letter voor in woord", () => {
@@ -18,5 +19,14 @@
       const input1 = "o";
       const output = word.includes(input1);
       expect(output).toBe(true);
+=======
+const guessLetter = require("./script.js");
 
-  }) 
+test("Komt letter voor in woord", function () {
+   const woord = "moestuin";
+   const ingevoerdeLetter = "o";
+   const output = woord.includes(ingevoerdeLetter);
+   expect(output).toBe(true);
+>>>>>>> 0edb669ed6e37fb627c1c33b4527151b5f9ff038
+
+})
