@@ -9,19 +9,25 @@
    in de DOM op de juiste plaats de niet geraden letters krijgt een "_"  
    Roept de functie theLetter aan en deze plaats de fout geraden letter  */
 
-const guessLetter = function () {
-   const inputs = ["i", "v"];
-   const input1 = " ";
 
-   if (inputs.includes(input1) || input1 === " " || input1 === "") {
-      return false;
-   } else {
-      return true;
-   }
-}
-test("test of bij de invoer al gebruikte letter, spatie of niks wordt afgevangen", () => {
+  
 
+  const guessLetter = function () {
+    let tries = 3;
+    const word = "moestuin";
+    const input1 = "q";  
 
-   expect(guessLetter.toBeFalsy);
+    if (!word.includes(input1)) {
+        tries++;
+        return tries;
+         
+    }
+};
 
+test("wordt tries alleen opgehoogd bij verkeerde letter", () => {
+
+  //const output = guessLetter(tries);
+ // expect(guessLetter(tries)).toBe(4);
+  //expect(guessLetter().toBe(4));
+  expect(guessLetter.toBe(4));
 });
