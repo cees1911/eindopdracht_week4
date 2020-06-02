@@ -12,26 +12,16 @@ const wordList = [
 ];
 
 const wordpicker = function (list) {
-  let word = "sinaasappel";
   let index = Math.floor(Math.random() * list.length);
   const x = list;
-  console.log("wat ben ik?", word);
   return x[index];
-};
-
-const wordGuessed = function (word, inputs) {
-  // remove all letters from word that are already guessed
-  // We can do this with a for loop to.
-  let remaining = word.filter(function (letter) {
-    // If the letter is guessed return true (we want to remove that right away)
-    return !inputs.includes(letter);
-  });
-  // If we have letters left, right?
-  return remaining.length === 0;
 };
 
 const clean = function () {
   document.querySelector("input").value = "";
+  document.querySelector(".win").style.display = "none";
+  document.querySelector(".lose").style.display = "none";
+
 };
 
 let gameOver;
@@ -73,6 +63,22 @@ const theWord = function (word, inputLetterWords) {
   document.querySelector(".the_word").innerHTML = display.join(" ");
 };
 
+/*const wordGuessed = function (word, inputs) {
+  if (word.length === inputs) {
+    winTheGame();
+  }
+}*/
+const wordGuessed = function (word, inputs) {
+  // remove all letters from word that are already guessed
+  // We can do this with a for loop to.
+  let remaining = word.filter(function (letter) {
+    // If the letter is guessed return true (we want to remove that right away)
+    return !inputs.includes(letter);
+  });
+  // If we have letters left, right?
+  return remaining.length === 0;
+};
+
 const guessLetter = function () {
   if (gameOver) {
     return;
@@ -80,7 +86,7 @@ const guessLetter = function () {
   const input1 = document.querySelector("input").value;
   document.querySelector("input").value = "";
 
-  if (inputs.includes(input1) || input1 === "") {
+  if (inputs.includes(input1) || input1 === " " || input1 === "") {
     return;
   }
 
@@ -93,6 +99,18 @@ const guessLetter = function () {
   theWord(word, inputs);
   letters(word, inputs);
 
+  console.log(word);
+  console.log(word.length);
+  console.log(inputs);
+  //console.log(theWord());
+  //console.log(letters());
+
+  /*if (word.length === inputs) {
+    winTheGame();
+  } else if (tries >= 5) {
+    lose4();
+  }*/
+
   if (wordGuessed(word, inputs)) {
     winTheGame();
   } else if (tries >= 5) {
@@ -101,10 +119,7 @@ const guessLetter = function () {
 };
 
 function beginTheGameWithPlayer() {
-
-  document.querySelector(".win").style.display = "none";
-  document.querySelector(".lose").style.display = "none";
-  document.querySelector("input").value = "";
+  clean();
 
   word = wordpicker(wordList).split("");
   spanTheWord1(word);
