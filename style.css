@@ -84,7 +84,126 @@ input {
   padding-left: 15px;
 }
 
+.hangout-man {
+  background-color: #94b8b8;
+  color: #ff6666;
+}
 
+.beurt1 {
+  display: none;
+  transform: translateX(-500px);
+  transition-property: all;
+  animation-name: hidehangman;
+  transition-timing-function: ease-in;
+  animation-duration: 1s;
+}
+
+.beurt1Active {
+  display: block;
+  transform: translateX(0);
+  transition-property: all;
+  animation-name: hang;
+  transition-timing-function: ease-in;
+  animation-duration: 1s;
+}
+
+.beurt2 {
+  display: none;
+  transform: translateX(-500px);
+  transition-property: all;
+  animation-name: hidehangman;
+  transition-timing-function: ease-in;
+  animation-duration: 1s;
+}
+
+.beurt2Active {
+  display: block;
+  transform: translateX(0);
+  transition-property: all;
+  animation-name: hang;
+  transition-timing-function: ease-in;
+  animation-duration: 1s;
+}
+
+.beurt3 {
+  display: none;
+  transform: translateX(-500px);
+  transition-property: all;
+  animation-name: hidehangman;
+  transition-timing-function: ease-in;
+  animation-duration: 1s;
+}
+
+.beurt3Active {
+  display: block;
+  transform: translateX(0);
+  transition-property: all;
+  animation-name: hang;
+  transition-timing-function: ease-in;
+  animation-duration: 1s;
+}
+
+.beurt4 {
+  display: none;
+  transform: translateX(-500px);
+  transition-property: all;
+  animation-name: hidehangman;
+  transition-timing-function: ease-in;
+  animation-duration: 1s;
+}
+
+.beurt4Active {
+  display: block;
+  transform: translateX(0);
+  transition-property: all;
+  animation-name: hang;
+  transition-timing-function: ease-in;
+  animation-duration: 1s;
+}
+
+.beurt5 {
+  display: none;
+  transform: translateX(-500px);
+  transition-property: all;
+  animation-name: hidehangman;
+  transition-timing-function: ease-in;
+  animation-duration: 1s;
+}
+
+.beurt5Active {
+  display: block;
+  transform: translateX(0);
+  transition-property: all;
+  animation-name: hang;
+  transition-timing-function: ease-in;
+  animation-duration: 1s;
+}
+
+@keyframes hang {
+  from {
+    transform: translateX(-500px)
+  }
+
+  to {
+    transform: translateX(0)
+  }
+
+  ;
+
+}
+
+@keyframes hidehangman {
+  from {
+    transform: translateX(0)
+  }
+
+  to {
+    transform: translateX(-500px)
+  }
+
+  ;
+
+}
 
 .displayWord {
   grid-column: 1;
