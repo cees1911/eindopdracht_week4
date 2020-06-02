@@ -27,5 +27,7 @@
 test("wordt tries alleen opgehoogd bij verkeerde letter", () => {
 
   //const output = guessLetter(tries);
-  expect(guessLetter(tries)).toBe(4);
+ // expect(guessLetter(tries)).toBe(4);
+  //expect(guessLetter().toBe(4));
+  expect(guessLetter.toBe(4));
 });

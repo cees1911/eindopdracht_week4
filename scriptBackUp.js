@@ -18,11 +18,9 @@ const wordpicker = function (list) {
 };
 
 const clean = function () {
-  gameover = false;
   document.querySelector("input").value = "";
   document.querySelector(".win").style.display = "none";
   document.querySelector(".lose").style.display = "none";
-  //document.querySelector(".beurt5Active").className = "beurt5"
 
 };
 
@@ -44,21 +42,6 @@ const spanTheWord1 = function (word) {
 
 const updateTriesDisplay = function (tries) {
   document.querySelector(".lives span").innerHTML = 5 - tries;
-  if (tries == 1) {
-    document.querySelector(".beurt1").className = "beurt1Active";
-  } else if (tries == 2) {
-    document.querySelector(".beurt1Active").className = "beurt1"
-    document.querySelector(".beurt2").className = "beurt2Active";
-  } else if (tries == 3) {
-    document.querySelector(".beurt2Active").className = "beurt2"
-    document.querySelector(".beurt3").className = "beurt3Active";
-  } else if (tries == 4) {
-    document.querySelector(".beurt3Active").className = "beurt3"
-    document.querySelector(".beurt4").className = "beurt4Active";
-  } else if (tries == 5) {
-    document.querySelector(".beurt4Active").className = "beurt4"
-    document.querySelector(".beurt5").className = "beurt5Active";
-  }
 };
 
 const letters = function (word, inputs) {
@@ -86,13 +69,9 @@ const theWord = function (word, inputLetterWords) {
   }
 }*/
 const wordGuessed = function (word, inputs) {
-  
-  let remaining = word.filter(function (letter) {
-    // If the letter is guessed return true (we want to remove that right away)
-    return !inputs.includes(letter);
-  });
-  // If we have letters left, right?
-  return remaining.length === 0;
+  //if all inputs are in the word
+  const remaining = word.every(i => inputs.includes(i));
+  return remaining
 };
 
 const guessLetter = function () {
@@ -108,10 +87,8 @@ const guessLetter = function () {
 
   if (!word.includes(input1)) {
     tries++;
-    updateTriesDisplay(tries);
+    document.querySelector(".lives span").innerHTML = 5 - tries;
   }
-
-
 
   inputs.push(input1);
   theWord(word, inputs);
@@ -153,7 +130,7 @@ const beginTheGameWithPlayer = () => {
 document.addEventListener("DOMContentLoaded", function () {
   document.querySelector(".guess").addEventListener("click", guessLetter);
   document
-    .querySelector(".restartButton")
+    .querySelector(".restart")
     .addEventListener("click", beginTheGameWithPlayer);
   beginTheGameWithPlayer();
 });
