@@ -1,5 +1,6 @@
 body {
   background-color: #94b8b8;
+  width: 1000px;
 }
 
 .win,
@@ -11,29 +12,25 @@ body {
   display: flex;
   justify-content: center;
   margin-bottom: 0;
-
 }
 
 .subheading {
   display: flex;
   justify-content: center;
-  color: #FFF;
-  font-family: 'Oswald';
+  color: #fff;
+  font-family: "Oswald";
   font-weight: 100;
   font-size: 30px;
   margin-top: 3px;
-
 }
 
 h1 {
-
   position: relative;
   color: #192947;
-  font-family: 'Oswald';
+  font-family: "Oswald";
   font-weight: 700;
   font-size: 40px;
   margin-bottom: 0px;
-
 }
 
 h1::before {
@@ -70,6 +67,7 @@ h1::after {
 
 .guessWord {
   grid-column: 2;
+  margin-left: 80px;
   padding-bottom: 5px;
 }
 
@@ -183,42 +181,38 @@ input {
 
 @keyframes hang {
   from {
-    transform: translateX(-500px)
+    transform: translateX(-500px);
   }
 
   to {
-    transform: translateX(150px)
+    transform: translateX(150px);
   }
-
-  ;
-
 }
 
 @keyframes hidehangman {
   from {
-    transform: translateX(0)
+    transform: translateX(0);
   }
 
   to {
-    transform: translateX(-500px)
+    transform: translateX(-500px);
   }
-
-  ;
-
 }
 
 .displayWord {
   grid-column: 1;
-  margin-left: 200px;
+  grid-row: 1;
+  margin-left: 175px;
   padding-bottom: 5px;
-  font-family: 'Oswald';
+  font-family: "Oswald";
+  align-content: center;
 }
 
 .displayWord h2,
 .win h2,
 .lose h2 {
   color: #192947;
-  font-family: 'Oswald';
+  font-family: "Oswald";
   font-weight: 200;
 }
 
@@ -228,35 +222,35 @@ input {
 }
 
 .diplayLives {
-  grid-column: 1;
+  grid-column: 2;
   grid-row: 2;
+  margin-left: 120px;
+  align-content: center;
   font-weight: 200;
-
 }
 
-.lives {
-  margin-left: 200px;
-  font-family: 'Oswald';
-  color: #192947;
+.lives {  
+  font-family: "Oswald";
+  color: #192947; 
+  margin-left: 120px; 
   font-weight: 200;
   font-size: 1.5em;
 }
 
 .incorrectly {
-  grid-column: 2;
+  grid-column: 1;
   grid-row: 2;
-  font-family: 'Oswald';
+  margin-left: 175px;
+  font-family: "Oswald";
 }
 
 .incorrectly h2 {
-  margin-left: 30px;
   color: #192947;
-  font-family: 'Oswald';
+  font-family: "Oswald";
   font-weight: 200;
 }
 
 .guessed_letters {
-  margin-left: 30px;
   font-weight: 200;
   font-size: 2em;
   color: #ff6666;
@@ -273,12 +267,12 @@ input {
   margin-left: 50px;
   grid-column: 2;
   grid-row: 3;
-  z-index: 3;
+ z-index: 3;
 }
 
 .lostWord {
   color: #192947;
-  font-family: 'Oswald';
+  font-family: "Oswald";
   font-weight: 200;
   font-size: 1em;
 }
@@ -321,7 +315,6 @@ input {
 }
 
 .restartButton {
-
   box-shadow: 3px 4px 0px 0px #8a2a21;
   background: linear-gradient(to bottom, #c62d1f 5%, #f5cbc8 100%);
   background-color: #c62d1f;
