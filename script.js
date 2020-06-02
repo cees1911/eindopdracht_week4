@@ -22,6 +22,7 @@ const clean = function () {
   document.querySelector(".win").style.display = "none";
   document.querySelector(".lose").style.display = "none";
   document.querySelector(".restart").className = "beurt5 restart";
+  document.querySelector(".restartButton").style.display = "none";
   gameover = false;
   beginTheGameWithPlayer()
 };
@@ -29,12 +30,14 @@ const clean = function () {
 let gameOver;
 const winTheGame = function () {
   document.querySelector(".win").style.display = "block";
+  document.querySelector(".restartButton").style.display = "inline-block";
   gameOver = true;
 };
 
 const lose4 = function () {
   // when losing 3 times, this has to happen
   document.querySelector(".lose").style.display = "block";
+  document.querySelector(".restartButton").style.display = "inline-block";
   gameOver = true;
 };
 
@@ -141,6 +144,8 @@ const beginTheGameWithPlayer = () => {
   inputs = [];
   theWord(word, inputs);
   letters(word, inputs);
+
+  document.querySelector(".restartButton").style.display = "none";
 }
 
 document.addEventListener("DOMContentLoaded", function () {

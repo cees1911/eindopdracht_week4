@@ -89,9 +89,7 @@ input {
   grid-row: 3;
   background-color: #94b8b8;
   color: #ff6666;
-  z-index: 1;
-  float: left;
-}
+  }
 
 .beurt1 {
   display: none;
@@ -175,7 +173,7 @@ input {
 }
 
 .beurt5Active {
-  display: block;
+  display: inline-block;
   transform: translateX(0);
   transition-property: all;
   animation-name: hang;
