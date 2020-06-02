@@ -69,8 +69,7 @@ const theWord = function (word, inputLetterWords) {
   }
 }*/
 const wordGuessed = function (word, inputs) {
-  // remove all letters from word that are already guessed
-  // We can do this with a for loop to.
+  
   let remaining = word.filter(function (letter) {
     // If the letter is guessed return true (we want to remove that right away)
     return !inputs.includes(letter);
