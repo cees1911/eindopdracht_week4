@@ -22,6 +22,8 @@ const clean = function () {
   document.querySelector(".win").style.display = "none";
   document.querySelector(".lose").style.display = "none";
   document.querySelector(".restart").className = "beurt5 restart";
+  gameover = false;
+  beginTheGameWithPlayer()
 };
 
 let gameOver;
@@ -90,9 +92,7 @@ const wordGuessed = function (word, inputs) {
 };
 
 const guessLetter = function () {
-  if (gameOver) {
-    return;
-  }
+
   const input1 = document.querySelector("input").value;
   document.querySelector("input").value = "";
 
@@ -131,7 +131,6 @@ const guessLetter = function () {
 };
 
 const beginTheGameWithPlayer = () => {
-  clean();
 
   word = wordpicker(wordList).split("");
   spanTheWord1(word);
@@ -148,6 +147,6 @@ document.addEventListener("DOMContentLoaded", function () {
   document.querySelector(".guess").addEventListener("click", guessLetter);
   document
     .querySelector(".restartButton")
-    .addEventListener("click", beginTheGameWithPlayer);
+    .addEventListener("click", clean);
   beginTheGameWithPlayer();
 });
