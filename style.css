@@ -89,7 +89,7 @@ input {
   grid-row: 3;
   background-color: #94b8b8;
   color: #ff6666;
-  }
+}
 
 .beurt1 {
   display: none;
@@ -102,7 +102,7 @@ input {
 
 .beurt1Active {
   display: block;
-  transform: translateX(0);
+  transform: translateX(150px);
   transition-property: all;
   animation-name: hang;
   transition-timing-function: ease-in;
@@ -120,7 +120,7 @@ input {
 
 .beurt2Active {
   display: block;
-  transform: translateX(0);
+  transform: translateX(150px);
   transition-property: all;
   animation-name: hang;
   transition-timing-function: ease-in;
@@ -138,7 +138,7 @@ input {
 
 .beurt3Active {
   display: block;
-  transform: translateX(0);
+  transform: translateX(150px);
   transition-property: all;
   animation-name: hang;
   transition-timing-function: ease-in;
@@ -156,7 +156,7 @@ input {
 
 .beurt4Active {
   display: block;
-  transform: translateX(0);
+  transform: translateX(150px);
   transition-property: all;
   animation-name: hang;
   transition-timing-function: ease-in;
@@ -187,7 +187,7 @@ input {
   }
 
   to {
-    transform: translateX(0)
+    transform: translateX(150px)
   }
 
   ;
