@@ -21,8 +21,7 @@ const clean = function () {
   document.querySelector("input").value = "";
   document.querySelector(".win").style.display = "none";
   document.querySelector(".lose").style.display = "none";
-  document.querySelector(".beurt5Active").className = "beurt5"
-
+  document.querySelector(".restart").className = "beurt5 restart";
 };
 
 let gameOver;
@@ -56,7 +55,7 @@ const updateTriesDisplay = function (tries) {
     document.querySelector(".beurt4").className = "beurt4Active";
   } else if (tries == 5) {
     document.querySelector(".beurt4Active").className = "beurt4"
-    document.querySelector(".beurt5").className = "beurt5Active";
+    document.querySelector(".beurt5").className = "beurt5Active restart";
   }
 };
 
