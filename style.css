@@ -1,12 +1,192 @@
+body {
+  background-color: #94b8b8;
+}
+
 .win,
-.lose {
+.lose { 
   display: none;
 }
 
-.win h2 {
-  color: red;
+.heading {
+  text-align: center;
 }
 
-.lose h2 {
-  color: blue;
+.subheading {
+  color:#FFF;
+  font-family:'Oswald';
+  font-weight:100;
+  margin-top: 3px;
+
 }
+
+h1 {
+  margin-left: 300px;
+  margin-right: 300px;
+  position: relative;
+  color:#FFF;
+  font-family:'Oswald';
+  font-weight:700;
+  margin-bottom: 0px;
+ 
+}
+
+h1::before  {
+  content: " ";
+  background-color: #ff6666;
+  border-radius: 200px 0px 0px 200px;
+  display: inline-block;
+  width: 28px;
+  height: 28px;
+  position: absolute;
+  margin-left: -40px;
+  margin-top: 10px;
+}
+h1::after   {
+  content: " ";
+  background-color: #ff6666;
+  border-radius: 0px 200px 200px 0px;
+  display: inline-block;
+  width: 28px;
+  height: 28px;
+  position: absolute;
+  margin-left: 10px;
+  margin-top: 10px;
+}
+
+.wrapper{
+  margin-left: 300px;
+  margin-right: 300px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: (80px 80px 150px 80px);
+  grid-gap: 0.3em;
+}
+
+.guessWord{
+  padding-bottom: 5px;
+}
+
+input {
+  margin-top: 25px;
+  margin-left: 30px;
+}
+
+.displayWord{
+  grid-column: 2;
+  margin-left: 30px;
+  padding-bottom: 5px;
+  font-family: 'Oswald';  
+}
+
+.displayWord h2, .win h2, .lose h2{
+  color:#FFF;
+  font-family:'Oswald';
+  font-weight:200;
+}
+ .the_word {
+   font-weight: 200;
+   font-size: 2em;
+ }
+
+.diplayLives {
+  grid-column: 1;
+  grid-row: 2;
+  font-weight:200;
+ }
+
+ .lives{
+   margin-left: 50px;
+   font-family: 'Oswald';
+   color: #FFF;
+   font-weight: 200;
+   font-size: 1.5em;
+ }
+
+.incorrectly {
+  grid-column: 2;
+  grid-row: 2;
+  font-family:'Oswald';
+}
+
+.incorrectly h2{
+  margin-left: 30px;
+  color: #FFF;
+  font-family:'Oswald';
+  font-weight: 200;
+}
+
+.guessed_letters {
+  margin-left: 30px;
+  font-weight: 200;
+  font-size: 2em;
+}
+.win {
+  margin-left: 50px;
+  grid-column: 1;
+  grid-row: 3;
+}
+
+.lose {
+  margin-left: 50px;
+  grid-column: 2;
+  grid-row: 3;
+}
+
+.lostWord{
+  color: #FFF;
+  font-family:'Oswald';
+  font-weight: 200;
+  font-size: 1em;
+}
+
+.guess {
+	box-shadow: 3px 4px 0px 0px #9fb4f2;
+	background:linear-gradient(to bottom, #192947 5%, #476e9e 100%);
+	background-color:#7892c2;
+	border-radius:17px;
+	border:1px solid #4e6096;
+	display:inline-block;	
+	color:#ffffff;
+	font-family:Arial;
+	font-size:19px;
+	padding:7px 25px;
+	text-decoration:none;
+  text-shadow:0px 1px 0px #283966;
+  margin-top: 15px;
+  margin-left: 45px;
+}
+.guess:hover {
+	background:linear-gradient(to bottom, #476e9e 5%,  #192947  100%);
+	background-color:#476e9e;
+}
+.guess:active {
+	position:relative;
+	top:1px;
+}
+
+.restart {
+  grid-column: 1;
+  grid-row: 4;
+	box-shadow: 3px 4px 0px 0px #8a2a21;
+	background:linear-gradient(to bottom, #c62d1f 5%, #f5cbc8 100%);
+	background-color:#c62d1f;
+	border-radius:17px;
+	border:1px solid #d02718;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:19px;
+	padding:7px 25px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #810e05;
+}
+.restart:hover {
+	background:linear-gradient(to bottom, #f24437 5%, #c62d1f 100%);
+	background-color:#f24437;
+}
+.restart:active {
+	position:relative;
+	top:1px;
+}
+
