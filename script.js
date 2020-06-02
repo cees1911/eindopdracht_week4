@@ -92,7 +92,7 @@ const wordGuessed = function (word, inputs) {
 };
 
 const guessLetter = function () {
-
+  //deze regel weer verwijderen. 
   const input1 = document.querySelector("input").value;
   document.querySelector("input").value = "";
 
